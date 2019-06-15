@@ -2,6 +2,8 @@ package com.example.demo;
 
 public interface LinkedQuestionAnswer {
 	
+	///Är ju som att man inte kan köra något?=?? 
+	
 	//Question one answer.
 	public insert(String question, String answer){}
 	//Question multiple answers.
