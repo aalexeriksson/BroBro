@@ -3,6 +3,7 @@ package com.example.quizapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,20 +13,28 @@ class MainActivity : AppCompatActivity() {
 
 
         //Val är som final , var är modifier bar.
-        var question = "Vad är 2+2?";
+
         var correctAnswer = "4";
         var curAnswer = " ";
 
 
         //Final
+
+        //Knappar
         val subAnswer = findViewById<Button>(R.id.buttonAnswer);
         val selQuestOne = findViewById<Button>(R.id.buttonSelectOne);
         val selQuestTwo = findViewById<Button>(R.id.buttonSelectTwo);
         val selQuestThree = findViewById<Button>(R.id.buttonSelectThree);
         val selQuestFour = findViewById<Button>(R.id.buttonSelectFour);
 
+        //Text
+        var question = findViewById<TextView>(R.id.question);
 
+        //Setting text:
 
+        question.text = "Vad är 2+2?"
+
+        //
 
 
 
@@ -44,9 +53,9 @@ class MainActivity : AppCompatActivity() {
 
         subAnswer.setOnClickListener {
             if (curAnswer == correctAnswer){
-                //SetTextTill CORRECT NOICE!
+                question.text = "next Einztein!";
             }else{
-                //SetTextTill YOU SÖK.
+                question.text = "tu ez stupido?"
             }
 
         }
