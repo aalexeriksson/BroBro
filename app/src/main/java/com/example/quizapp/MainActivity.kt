@@ -62,13 +62,15 @@ class MainActivity : AppCompatActivity() {
 
         subAnswer.setOnClickListener {
             println("subAnswer klicked.");
+            println("current answer = "+curAnswer.toString());
+            println("correct answer = "+correctAnswer.toString());
             if (curAnswer == correctAnswer){
                 question.text = "next Einztein!";
 
             }else{
                 question.text = "tu ez stupido?"
             }
-            question.refreshDrawableState();
+
 
         }
 
