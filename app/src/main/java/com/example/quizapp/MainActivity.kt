@@ -39,35 +39,39 @@ class MainActivity : AppCompatActivity() {
 
 
         selQuestOne.setOnClickListener {
+
             curAnswer = selQuestOne.text.toString();
+            println("selQOne klicked.");
+            println("current answer = "+curAnswer.toString());
         }
         selQuestTwo.setOnClickListener {
             curAnswer = selQuestTwo.text.toString();
+            println("selQTwo klicked.");
+            println("current answer = "+curAnswer.toString());
         }
         selQuestThree.setOnClickListener {
             curAnswer = selQuestThree.text.toString();
+            println("selQThree klicked.");
+            println("current answer = "+curAnswer.toString());
         }
         selQuestFour.setOnClickListener {
             curAnswer = selQuestFour.text.toString();
+            println("selQFour klicked.");
+            println("current answer = "+curAnswer.toString());
         }
 
         subAnswer.setOnClickListener {
+            println("subAnswer klicked.");
             if (curAnswer == correctAnswer){
                 question.text = "next Einztein!";
+
             }else{
                 question.text = "tu ez stupido?"
             }
+            question.refreshDrawableState();
 
         }
 
-
-        fun subAnswer(ans:boolean){
-
-
-
-
-
-        }
 
 
 
